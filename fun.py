@@ -17,14 +17,15 @@ else:
 
 
 
-
-def obtener_numeros_primos_menores(numero):
+#segunda funcion primos menores que un numero
+def numeros_primos_menores(numero):
     numeros_primos = []
     for num in range(2, numero):
         if es_primo(num):
             numeros_primos.append(num)
     return numeros_primos
 
+#primera funcion si es primo o no
 def es_primo(numero):
     if numero < 2:
         return False
@@ -33,7 +34,8 @@ def es_primo(numero):
             return False
     return True
 
-numero_ingresado = int(input("Ingrese un número: "))
-primos_menores = obtener_numeros_primos_menores(numero_ingresado)
-print("Números primos menores a", numero_ingresado, ":")
+#preguntar y responder
+numero = int(input("Ingrese un número: "))
+primos_menores = numeros_primos_menores(numero)
+print("Números primos menores a", numero, ":")
 print(primos_menores)
