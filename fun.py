@@ -32,3 +32,8 @@ def es_primo(numero):
         if numero % i == 0:
             return False
     return True
+
+numero_ingresado = int(input("Ingrese un número: "))
+primos_menores = obtener_numeros_primos_menores(numero_ingresado)
+print("Números primos menores a", numero_ingresado, ":")
+print(primos_menores)
